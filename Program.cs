@@ -7,22 +7,12 @@ namespace Exception_Handling_task
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Enter the Room ID");
+            System.Console.WriteLine("Enter Room ID: ");
             string roomNo = System.Console.ReadLine();
-
-             int catchnum;
-
-            while (
-                !int.TryParse(Console.ReadLine(), out catchnum)
-                )
-            {
-                Console.WriteLine("Invalid! Must enter a number");
-                Console.Write("Enter Room ID: ");
-            }
-
+                
             System.Console.WriteLine("Enter Name: ");
             string personName = System.Console.ReadLine();
-
+            
             System.Console.WriteLine("Entered on: DD/MM/YYYY HH:MM");
             DateTime entryDate;
             while (true)
@@ -41,7 +31,9 @@ namespace Exception_Handling_task
             System.Console.WriteLine("Enter Date Exited: ");
             int departureTime = Int32.Parse(Console.ReadLine());
             
-            System.Console.WriteLine($"Student {personName} entered {roomNo} at {entryDate}");
+
+
+            System.Console.WriteLine($"Student {personName} entered {roomNo} at {entryDate} and exited at {departureTime}"); 
         
         }
     }
